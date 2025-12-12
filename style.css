@@ -1,9 +1,9 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  /* UPDATED: Brighter, positive, energetic background gradient */
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: white; /* Kept white for contrast */
+  /* UPDATED: Dark, professional, energetic background gradient (Black/Gray Fade) */
+  background: linear-gradient(135deg, #1f1f1f, #0a0a0a);
+  color: white; /* Kept white for contrast with the dark background */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -40,6 +40,7 @@ p {
 
 /* Kept the sold-out style in case you reintroduce it, but it's not used in the HTML */
 .sold-out {
+  /* UPDATED: Red for "Sold Out" remains a good contrast color */
   background: linear-gradient(135deg, #ff4d4d, #cc0000);
   color: white;
   padding: 0.3rem 0.75rem;
@@ -75,10 +76,28 @@ input[type="email"] {
   margin: 0;
 }
 
+.close-btn {
+  /* Reusing the button styles from the main page, but adapted for the dark modal */
+  background-color: #68f372;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.close-btn:hover {
+  background-color: rgb(246, 122, 244);
+  color: white;
+}
+
 button {
-  /* Kept green for "Fresh Burst" tie-in */
-  background-color: #4ae266;
-  color: #000; /* Changed text color to black for higher contrast */
+  /* Primary button color: Vibrant cyan/teal */
+  background-color: #68f372;
+  color: #000; /* Text color is black for higher contrast */
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -89,8 +108,8 @@ button {
 }
 
 button:hover {
-  /* Brighter, clearer hover color */
-  background-color: #0920d5;
+  /* Hover color is a darker, more electric blue */
+  background-color: rgb(246, 122, 244);
   color: white;
 }
 
@@ -116,8 +135,10 @@ footer {
   text-align: center;
   /* Tighter padding to bring features up and large bottom padding to push text down */
   padding: 1rem 2rem 4rem;
-  /* Darker, transparent overlay for a grounding effect */
-  background: rgba(0, 0, 0, 0.4);
+  /* CRITICAL UPDATE: White background for the footer section */
+  background: white;
+  /* CRITICAL UPDATE: Black text for the footer content */
+  color: #000;
 }
 
 .features {
@@ -170,9 +191,9 @@ footer p {
 }
 
 .modal-content {
-  /* Styles matching the Clarity brand */
-  background: white;
-  color: #2c5364; /* Dark text color */
+  /* Styles matching the Clarity brand, now with dark mode background */
+  background: #252525;
+  color: white; /* Light text color for contrast */
   padding: 30px;
   border-radius: 12px;
   max-width: 400px;
@@ -205,22 +226,6 @@ footer p {
   transform: scale(1);
 }
 
-.close-btn {
-  /* Reusing the button styles from the main page, but with white background */
-  background-color: #f0f0f0;
-  color: #2c5364;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  width: 100%;
-}
-
-.close-btn:hover {
-  background-color: #dcdcdc;
-}
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 1200px) {
