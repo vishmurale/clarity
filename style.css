@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* UPDATED: Brighter, positive, energetic background gradient */
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white; /* Kept white for contrast */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  /* Ensure hero takes available space but allows footer to sit at bottom */
+  flex: 1; 
+}
+
+.content {
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.1; /* Tighter line height for titles */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Kept the sold-out style in case you reintroduce it, but it's not used in the HTML */
+.sold-out {
+  background: linear-gradient(135deg, #ff4d4d, #cc0000);
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  white-space: nowrap; /* Prevents badge text from wrapping awkwardly */
+}  
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="email"] {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  flex: 1;
+  font-size: 1rem; /* Prevents auto-zoom on iOS */
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.title-row h1 {
+  margin: 0;
+}
+
+button {
+  /* Kept green for "Fresh Burst" tie-in */
+  background-color: #4ae266; 
+  color: #000; /* Changed text color to black for higher contrast */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+button:hover {
+  /* Brighter, clearer hover color */
+  background-color: #0920d5; 
+  color: white; 
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+}
+
+.image img {
+  width: 60vw;
+  max-width: 600px;
+  min-width: 200px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); /* Adds depth */
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  /* Darker, transparent overlay for a grounding effect */
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.features div {
+  max-width: 200px;
+}
+
+/* --- Custom Modal Styles for Success Message (Add this to style.css) --- */
+
+.modal-overlay {
+/* Hides the modal by default (CRITICAL CORRECTION) */
+  display: none; 
+  /* Fixed positioning to cover the whole screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Semi-transparent dark background */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  /* NO DISPLAY: FLEX HERE */
+}
+
+.modal-content {
+  /* Styles matching the Clarity brand */
+  background: white;
+  color: #2c5364; /* Dark text color */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9); /* Start slightly smaller for a nice transition */
+  transition: all 0.3s ease-out;
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.modal-overlay.active {
+/* Class to show the modal (NOW IT WILL ONLY SHOW WHEN THIS CLASS IS PRESENT) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.active .modal-content {
+  /* Scales the modal up when shown */
+  transform: scale(1);
+}
+
+.close-btn {
+  /* Reusing the button styles from the main page, but with white background */
+  background-color: #f0f0f0; 
+  color: #2c5364; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.close-btn:hover {
+  background-color: #dcdcdc; 
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column; /* Stack content top-to-bottom */
+    padding: 3rem 1.5rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .title-row {
+    justify-content: center; /* Center the title and badge */
+    flex-wrap: wrap;         /* Allow wrapping on very small screens */
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Slightly smaller font for mobile */
+  }
+
+  /* Stack the form inputs vertically on mobile */
+  form {
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  input[type="email"], button {
+    width: 100%; /* Make them full width */
+    box-sizing: border-box;
+  }
+
+  .image img {
+    width: 80%; /* Adjust image size for column layout */
+    max-width: 350px;
+  }
+
+  .features {
+    flex-direction: column; /* Stack footer features */
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .features div {
+    max-width: 100%;
+  }
+
+
+}
