@@ -16,7 +16,7 @@ body {
   gap: 4rem;
   padding: 4rem 2rem;
   /* Ensure hero takes available space but allows footer to sit at bottom */
-  flex: 1; 
+  flex: 1;
 }
 
 .content {
@@ -46,7 +46,7 @@ p {
   letter-spacing: 1px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.3);
   white-space: nowrap; /* Prevents badge text from wrapping awkwardly */
-}  
+}
 
 form {
   display: flex;
@@ -64,7 +64,7 @@ input[type="email"] {
 .title-row {
   display: flex;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .title-row h1 {
@@ -73,7 +73,7 @@ input[type="email"] {
 
 button {
   /* Kept green for "Fresh Burst" tie-in */
-  background-color: #4ae266; 
+  background-color: #4ae266;
   color: #000; /* Changed text color to black for higher contrast */
   border: none;
   padding: 0.75rem 1.5rem;
@@ -86,22 +86,25 @@ button {
 
 button:hover {
   /* Brighter, clearer hover color */
-  background-color: #0920d5; 
-  color: white; 
+  background-color: #0920d5;
+  color: white;
 }
 
 .image {
-  flex: 1;
+  /* Set a fixed size for the image container to give it more weight in the flex layout */
+  flex: 1.5; /* Increased flex value */
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .image img {
-  width: 60vw;
-  max-width: 600px;
-  min-width: 200px;
+  /* Increased the viewport width (vw) unit to make it larger relative to the screen */
+  width: 70vw;
+  /* Increased the maximum size the image can grow to */
+  max-width: 750px;
+  min-width: 250px; /* Increased minimum size slightly */
   height: auto;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); /* Adds depth */
+  /* filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); */
 }
 
 footer {
@@ -126,7 +129,7 @@ footer {
 
 .modal-overlay {
 /* Hides the modal by default (CRITICAL CORRECTION) */
-  display: none; 
+  display: none;
   /* Fixed positioning to cover the whole screen */
   position: fixed;
   top: 0;
@@ -177,8 +180,8 @@ footer {
 
 .close-btn {
   /* Reusing the button styles from the main page, but with white background */
-  background-color: #f0f0f0; 
-  color: #2c5364; 
+  background-color: #f0f0f0;
+  color: #2c5364;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -189,7 +192,7 @@ footer {
 }
 
 .close-btn:hover {
-  background-color: #dcdcdc; 
+  background-color: #dcdcdc;
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
@@ -216,7 +219,7 @@ footer {
 
   /* Stack the form inputs vertically on mobile */
   form {
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
   }
 
@@ -225,9 +228,10 @@ footer {
     box-sizing: border-box;
   }
 
+  /* NEW: Use a large percentage width for the image on mobile */
   .image img {
-    width: 80%; /* Adjust image size for column layout */
-    max-width: 350px;
+    width: 90%;
+    max-width: 500px; /* Increased max-width for larger mobile displays/tablets */
   }
 
   .features {
