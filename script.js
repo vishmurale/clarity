@@ -28,6 +28,7 @@ function hideModal(modalElement) {
 if (buyNowBtn) {
     buyNowBtn.addEventListener('click', () => {
         showModal(waitlistModal);
+        gtag('event', 'buy_now');
     });
 }
 
@@ -84,6 +85,8 @@ if (waitlistForm) {
         
         // 3. Reset the form for the next entry
         waitlistForm.reset();
+
+        gtag('event', 'sign_up');
         
       }).catch(() => {
         console.log("There was a problem submitting your email. Please try again!");
