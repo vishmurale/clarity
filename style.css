@@ -38,7 +38,7 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Kept the sold-out style in case you reintroduce it, but it's not used in the HTML */
+/* Sold-out style (retained, though not used in new HTML) */
 .sold-out {
   /* UPDATED: Red for "Sold Out" remains a good contrast color */
   background: linear-gradient(135deg, #ff4d4d, #cc0000);
@@ -53,6 +53,7 @@ p {
   white-space: nowrap; /* Prevents badge text from wrapping awkwardly */
 }
 
+/* Base Form Style - now primarily applies to the form inside the modal */
 form {
   display: flex;
   gap: 0.5rem;
@@ -76,24 +77,28 @@ input[type="email"] {
   margin: 0;
 }
 
-.close-btn {
-  /* Reusing the button styles from the main page, but adapted for the dark modal */
-  background-color: #68f372;
-  color: #000;
+/* NEW: Style for the main "Buy Now" CTA button on the hero section */
+.main-cta-button {
+  /* Using your primary button styles */
+  background-color: #68f372; 
+  color: #000; 
   border: none;
-  padding: 10px 20px;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s ease;
-  width: 100%;
+  white-space: nowrap;
+  font-size: 1.1rem; 
+  display: inline-block; 
 }
 
-.close-btn:hover {
+.main-cta-button:hover {
   background-color: rgb(246, 122, 244);
   color: white;
 }
 
+/* General Button Style (applies to form submit button inside modal and main CTA) */
 button {
   /* Primary button color: Vibrant cyan/teal */
   background-color: #68f372;
@@ -112,6 +117,28 @@ button:hover {
   background-color: rgb(246, 122, 244);
   color: white;
 }
+
+/* Style for the Close Button inside the modal */
+.close-btn {
+  /* Reusing the button styles from the main page, but adapted for the dark modal */
+  background-color: #f0f0f0; 
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  width: 100%;
+  /* ADDED: Space between the form/content and the close button */
+  margin-top: 1rem; 
+}
+
+.close-btn:hover {
+  background-color: #dcdcdc; 
+  color: black;
+}
+
 
 .image {
   /* Set a fixed size for the image container to give it more weight in the flex layout */
@@ -173,10 +200,10 @@ footer p {
   margin: 0;
 }
 
-/* --- Custom Modal Styles for Success Message (Add this to style.css) --- */
+/* --- Custom Modal Styles --- */
 
 .modal-overlay {
-/* Hides the modal by default (CRITICAL CORRECTION) */
+/* Hides the modal by default */
   display: none;
   /* Fixed positioning to cover the whole screen */
   position: fixed;
@@ -187,7 +214,6 @@ footer p {
   /* Semi-transparent dark background */
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
-  /* NO DISPLAY: FLEX HERE */
 }
 
 .modal-content {
@@ -215,7 +241,7 @@ footer p {
 }
 
 .modal-overlay.active {
-/* Class to show the modal (NOW IT WILL ONLY SHOW WHEN THIS CLASS IS PRESENT) */
+/* Class to show the modal */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,7 +251,6 @@ footer p {
   /* Scales the modal up when shown */
   transform: scale(1);
 }
-
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 1200px) {
@@ -254,15 +279,22 @@ footer p {
     font-size: 2.5rem; /* Slightly smaller font for mobile */
   }
 
-  /* Stack the form inputs vertically on mobile */
-  form {
-    flex-direction: column;
+  /* Stack the form inputs vertically on mobile ONLY inside the modal */
+  #waitlist-modal form {
+    flex-direction: column; 
     width: 100%;
   }
 
-  input[type="email"], button {
-    width: 100%; /* Make them full width */
+  /* Target elements inside the modal form */
+  #waitlist-modal input[type="email"], #waitlist-modal button[type="submit"] {
+    width: 100%; 
     box-sizing: border-box;
+  }
+
+  /* Make the main Buy Now button full width on mobile */
+  .main-cta-button {
+      width: 100%;
+      box-sizing: border-box;
   }
 
   /* NEW: Use a large percentage width for the image on mobile */

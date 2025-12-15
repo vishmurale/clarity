@@ -12,31 +12,61 @@
     gtag('js', new Date());
     gtag('config', 'G-Z7Q9BMVZZW');
   </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1498650317870373');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1498650317870373&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
 </head>
 <body>
   <div class="hero">
     <div class="content">
       <div class="title-row">
         <h1>Clarity</h1>
-          <span class="sold-out">SOLD OUT</span>
-
-      </div>
+        </div>
       <p>The performance drink for professionals. Sharpen your morning.</p>
 
-      <form id="signup-form">
-        <input type="email" name="email" placeholder="Enter your email" required/>
-        <button type="submit">Notify me when available</button>
-      </form>
-    </div>
+      <button id="buy-now-btn" class="main-cta-button">Buy now</button>
+
+      </div>
     <div class="image">
       <img src="clarity.png" alt="Clarity Morning Berry and Fresh Burst Bottles"/>
     </div>
 
     
-    <div id="success-message" class="modal-overlay">
+    <div id="waitlist-modal" class="modal-overlay">
+      <div class="modal-content">
+        <h2>Sorry, we are **Sold Out!**</h2>
+        <p>Our initial batch flew off the shelves. Enter your email below to get on the **priority waitlist** and be the first to know when we restock!</p>
+        
+        <form id="waitlist-form">
+          <input type="email" name="email" placeholder="Enter your email" required/>
+          <button type="submit">Join Waitlist</button>
+        </form>
+        
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+    
+    <div id="waitlist-success-message" class="modal-overlay">
       <div class="modal-content">
         <h2>🎉 Thank You!</h2>
-        <p>We'll notify you as soon as Clarity is ready to order. Get ready to sharpen your morning!</p>
+        <p>You're on the priority list! We'll notify you as soon as Clarity is ready to order. Get ready to sharpen your morning!</p>
         <button class="close-btn">Close</button>
       </div>
     </div>
