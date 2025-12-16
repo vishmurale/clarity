@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  /* UPDATED: Dark, professional, energetic background gradient (Black/Gray Fade) */
-  background: linear-gradient(135deg, #1f1f1f, #0a0a0a);
-  color: white; /* Kept white for contrast with the dark background */
+  /* CRITICAL UPDATE: White background */
+  background: white;
+  /* CRITICAL UPDATE: Black text for contrast */
+  color: #000;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -16,8 +17,6 @@ body {
   gap: 4rem;
   padding: 4rem 2rem;
   padding-bottom: 2rem;
-  /* CRITICAL CHANGE: Set flex to 0. This prevents the hero from stretching to fill the remaining
-     vertical space, pulling the footer and the features section higher up the page. */
   flex: 0;
 }
 
@@ -26,21 +25,22 @@ body {
 }
 
 h1 {
-  /* Kept at 3rem */
   font-size: 3rem;
   margin-bottom: 1rem;
-  line-height: 1.1; /* Tighter line height for titles */
+  line-height: 1.1;
+  /* Ensure title is black against white background */
+  color: #000;
 }
 
 p {
-  /* TEXT SIZE INCREASE: From 1.2rem to 1.4rem */
   font-size: 1.4rem;
   margin-bottom: 2rem;
+  /* Ensure paragraph text is black */
+  color: #333; /* Slightly softer black for main text */
 }
 
 /* Sold-out style (retained, though not used in new HTML) */
 .sold-out {
-  /* UPDATED: Red for "Sold Out" remains a good contrast color */
   background: linear-gradient(135deg, #ff4d4d, #cc0000);
   color: white;
   padding: 0.3rem 0.75rem;
@@ -50,7 +50,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-  white-space: nowrap; /* Prevents badge text from wrapping awkwardly */
+  white-space: nowrap;
 }
 
 /* Base Form Style - now primarily applies to the form inside the modal */
@@ -64,7 +64,10 @@ input[type="email"] {
   border-radius: 8px;
   border: none;
   flex: 1;
-  font-size: 1rem; /* Prevents auto-zoom on iOS */
+  font-size: 1rem;
+  /* Retained for contrast inside the dark modal */
+  background-color: white;
+  color: #000;
 }
 
 .title-row {
@@ -79,9 +82,9 @@ input[type="email"] {
 
 /* NEW: Style for the main "Buy Now" CTA button on the hero section */
 .main-cta-button {
-  /* Using your primary button styles */
-  background-color: #68f372; 
-  color: #000; 
+  /* Using your primary button styles for high contrast */
+  background-color: #ff78d2;
+  color: white;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -89,20 +92,20 @@ input[type="email"] {
   font-weight: bold;
   transition: background 0.3s ease;
   white-space: nowrap;
-  font-size: 1.1rem; 
-  display: inline-block; 
+  font-size: 1.1rem;
+  display: inline-block;
 }
 
 .main-cta-button:hover {
-  background-color: rgb(246, 122, 244);
-  color: white;
+  background-color: rgb(255, 221, 29);
+  color: black;
 }
 
 /* General Button Style (applies to form submit button inside modal and main CTA) */
 button {
   /* Primary button color: Vibrant cyan/teal */
-  background-color: #68f372;
-  color: #000; /* Text color is black for higher contrast */
+  background-color: #ff78d2;
+  color: white;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -114,14 +117,14 @@ button {
 
 button:hover {
   /* Hover color is a darker, more electric blue */
-  background-color: rgb(246, 122, 244);
-  color: white;
+  background-color: rgb(255, 221, 29);
+  color: black;
 }
 
 /* Style for the Close Button inside the modal */
 .close-btn {
-  /* Reusing the button styles from the main page, but adapted for the dark modal */
-  background-color: #f0f0f0; 
+  /* Retained light background for close button for contrast inside the dark modal */
+  background-color: #f0f0f0;
   color: #000;
   border: none;
   padding: 10px 20px;
@@ -130,49 +133,41 @@ button:hover {
   font-weight: bold;
   transition: background 0.3s ease;
   width: 100%;
-  /* ADDED: Space between the form/content and the close button */
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .close-btn:hover {
-  background-color: #dcdcdc; 
+  background-color: #dcdcdc;
   color: black;
 }
 
 
 .image {
-  /* Set a fixed size for the image container to give it more weight in the flex layout */
-  flex: 1.5; /* Increased flex value */
+  flex: 1.5;
   display: flex;
   justify-content: center;
 }
 
 .image img {
-  /* Increased the viewport width (vw) unit to make it larger relative to the screen */
   width: 55vw;
-  /* Increased the maximum size the image can grow to */
   max-width: 550px;
-  min-width: 250px; /* Increased minimum size slightly */
+  min-width: 250px;
   height: auto;
-  /* Shadow filter remains commented out as requested earlier */
-  /* filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); */
 }
 
 footer {
   text-align: center;
-  /* Tighter padding to bring features up and large bottom padding to push text down */
   padding: 1rem 2rem 4rem;
-  /* CRITICAL UPDATE: White background for the footer section */
-  background: white;
-  /* CRITICAL UPDATE: Black text for the footer content */
-  color: #000;
+  /* CRITICAL UPDATE: Footer background is now BLACK */
+  background: #000;
+  /* CRITICAL UPDATE: Footer text is WHITE */
+  color: #fff;
 }
 
 .features {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  /* CRITICAL CHANGE: Increased margin to 2rem for a clear gap between features and copyright */
   margin-bottom: 2rem;
 }
 
@@ -182,88 +177,88 @@ footer {
 
 /* Feature Titles (strong tag inside features div) */
 .features div strong {
-  /* TEXT SIZE INCREASE: Made feature titles bigger */
   font-size: 1.2rem;
+  /* CRITICAL UPDATE: Feature titles are WHITE */
+  color: #fff;
 }
 
 /* Feature Descriptions (p tag inside features div) */
 .features div p {
-  /* TEXT SIZE INCREASE: Made feature descriptions bigger and reduced margin */
   font-size: 1.1rem;
   margin-bottom: 0;
+  /* CRITICAL UPDATE: Feature descriptions are light gray/white */
+  color: #ccc;
 }
 
 footer p {
-  /* Reduced font size for the copyright line */
   font-size: 0.8rem;
-  /* Set margin to 0 so the footer padding controls all the space */
   margin: 0;
+  /* CRITICAL UPDATE: Ensure copyright text is white */
+  color: #aaa;
 }
 
-/* --- Custom Modal Styles --- */
+/* --- Custom Modal Styles (Modal remains dark for high-impact sold-out message) --- */
 
 .modal-overlay {
-/* Hides the modal by default */
   display: none;
-  /* Fixed positioning to cover the whole screen */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* Semi-transparent dark background */
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
 
 .modal-content {
-  /* Styles matching the Clarity brand, now with dark mode background */
   background: #252525;
-  color: white; /* Light text color for contrast */
+  color: white; /* Base color set to white */
   padding: 30px;
   border-radius: 12px;
   max-width: 400px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transform: scale(0.9); /* Start slightly smaller for a nice transition */
+  transform: scale(0.9);
   transition: all 0.3s ease-out;
 }
 
 .modal-content h2 {
   font-size: 1.8rem;
   margin-top: 0;
+  /* Ensure H2 is white */
+  color: white;
 }
 
 .modal-content p {
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.4;
+  /* Ensure paragraph text is white */
+  color: white;
 }
 
 .modal-overlay.active {
-/* Class to show the modal */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal-overlay.active .modal-content {
-  /* Scales the modal up when shown */
   transform: scale(1);
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 1200px) {
   .hero {
-    flex-direction: column; /* Stack content top-to-bottom */
+    flex-direction: column;
     padding: 3rem 1.5rem 2rem;
     gap: 3rem;
     text-align: center;
   }
 
   .title-row {
-    justify-content: center; /* Center the title and badge */
-    flex-wrap: wrap;         /* Allow wrapping on very small screens */
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .content {
@@ -276,18 +271,18 @@ footer p {
   }
 
   h1 {
-    font-size: 2.5rem; /* Slightly smaller font for mobile */
+    font-size: 2.5rem;
   }
 
   /* Stack the form inputs vertically on mobile ONLY inside the modal */
   #waitlist-modal form {
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
   }
 
   /* Target elements inside the modal form */
   #waitlist-modal input[type="email"], #waitlist-modal button[type="submit"] {
-    width: 100%; 
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -300,14 +295,13 @@ footer p {
   /* NEW: Use a large percentage width for the image on mobile */
   .image img {
     width: 90%;
-    max-width: 500px; /* Increased max-width for larger mobile displays/tablets */
+    max-width: 500px;
   }
 
   .features {
-    flex-direction: column; /* Stack footer features */
+    flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    /* Ensure mobile margin is also large enough */
     margin-bottom: 2rem;
   }
 
@@ -316,10 +310,10 @@ footer p {
   }
 
   .features div strong {
-    font-size: 1.1rem; /* Adjust feature title size for mobile */
+    font-size: 1.1rem;
   }
 
   .features div p {
-    font-size: 1rem; /* Adjust feature description size for mobile */
+    font-size: 1rem;
   }
 }
