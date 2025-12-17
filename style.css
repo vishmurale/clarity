@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   /* CRITICAL UPDATE: White background */
-  background: white;
+  background: #FBFBFB;
   /* CRITICAL UPDATE: Black text for contrast */
   color: #000;
   display: flex;
