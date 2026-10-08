@@ -1,0 +1,8 @@
+{
+  "name": "clarity-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./site/css/styles.css --minify"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}
