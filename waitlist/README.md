@@ -5,7 +5,7 @@ Static landing page for the Clarity Batch 01 waitlist. Hosted on Netlify; sign-u
 
 ## Folder layout
 
-- `site/` is what Netlify publishes (`index.html`, `css/`, `js/`, `images/`).
+- `site/` is what Netlify publishes (set in the repo-root `netlify.toml`) (`index.html`, `css/`, `js/`, `images/`).
 - `site/js/config.js` holds the sign-up URL. This is the only file to edit when connecting the sheet.
 - `apps-script/Code.gs` is the script that writes each sign-up into the sheet.
 - `src/input.css` is the stylesheet source. `site/css/styles.css` is already built, so Netlify needs no build step.
@@ -75,8 +75,8 @@ function json_(obj) {
 
 ## 2. Deploy on Netlify
 
-- **From GitHub:** in Netlify choose **Add new site > Import an existing project**, pick `vishmurale/clarity`,
-  and set **Base directory** to `waitlist`. `netlify.toml` already sets the publish folder to `site`, with no build command.
+- **From GitHub:** the Netlify site linked to `vishmurale/clarity` deploys automatically on every push to `master`.
+  The `netlify.toml` at the repo root sets the publish folder to `waitlist/site`, with no build command.
 - **Without GitHub:** drag the `site` folder onto Netlify's **Deploys** page.
 
 ## Changing styles
