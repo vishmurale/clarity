@@ -1,0 +1,9 @@
+# Netlify serves the Batch 01 waitlist site from waitlist/site.
+# The older page at the repo root (Index.html, style.css, script.js) is kept for reference but no longer published.
+[build]
+  publish = "waitlist/site"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

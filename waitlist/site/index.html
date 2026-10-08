@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Clarity | Sustained mental performance</title>
+<meta name="description" content="Clarity is a daily performance drink mix powered by paraxanthine, with L-theanine, electrolytes and vitamins. Sign up for Batch 01 access.">
+<meta property="og:title" content="Clarity | Sustained mental performance">
+<meta property="og:description" content="Zero jitters. Zero crash. Just Clarity. Sign up for Batch 01 access.">
+<meta property="og:image" content="/images/sachet1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="wash">
+  <div class="sticky z-20 border-b backdrop-blur" style="top:env(safe-area-inset-top,0px);border-color:rgba(255,255,255,.7);background:rgba(238,243,247,.85)">
+    <div class="mx-auto py-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-1" style="max-width:1500px;padding-inline:clamp(1.25rem,5vw,5rem)">
+      <div class="flex items-center gap-x-8 gap-y-1 flex-wrap">
+        <a href="#home" data-go="home" class="mark font-semibold text-xl leading-none" aria-label="Clarity home">CLARITY</a>
+        <nav class="flex gap-6 text-sm uppercase tracking-[.08em]" aria-label="Pages">
+          <a href="#home" data-go="home" class="navlink">Home</a>
+          <a href="#science" data-go="science" class="navlink">The science</a>
+        </nav>
+      </div>
+      <p class="text-xs sm:text-sm uppercase tracking-[.08em]" style="color:var(--ink-soft)">Batch 01 waitlist open</p>
+    </div>
+  </div>
+
+  <main id="home">
+    <section class="hero" style="overflow:hidden">
+      <div class="copy">
+        
+        <h1 class="font-medium uppercase leading-tight" style="text-wrap:balance">Sustained mental performance. <br class="hidden lg:inline">Zero jitters. Zero crash. <br class="hidden lg:inline">Just Clarity.</h1>
+        
+        <p class="max-w-[48ch] text-lg sm:text-xl leading-relaxed" style="color:var(--ink-soft)">Powered by paraxanthine and combined with L‑theanine, electrolytes and vitamins, Clarity is a daily performance drink mix for demanding workdays. Just add water.</p>
+        <form id="waitlist-form" class="flex flex-col gap-3 max-w-[40rem]" novalidate>
+          <div class="grid gap-3 sm:grid-cols-[1fr_1.25fr]">
+            <div><label for="name" class="sr-only">Name</label><input id="name" name="name" class="field" placeholder="Name" autocomplete="name" required maxlength="120"></div>
+            <div><label for="email" class="sr-only">Email address</label><input id="email" name="email" type="email" class="field" placeholder="Email address" autocomplete="email" required maxlength="200"></div>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <p id="form-error" role="alert" class="text-sm" style="color:var(--berry)" hidden></p>
+          <fieldset class="flex flex-wrap items-center gap-2">
+            <legend class="text-sm mb-2" style="color:var(--ink-soft)">Which flavor do you want to try first? (optional)</legend>
+            <button type="button" class="chip" data-flavor="Raspberry Yuzu" aria-pressed="false"><i style="background:var(--berry)"></i>Raspberry Yuzu</button>
+            <button type="button" class="chip" data-flavor="Orange Guava" aria-pressed="false"><i style="background:var(--guava)"></i>Orange Guava</button>
+            <button type="button" class="chip" data-flavor="Watermelon Mint" aria-pressed="false"><i style="background:var(--mint)"></i>Watermelon Mint</button>
+          </fieldset>
+          <button type="submit" class="cta" id="submit-btn">Sign up for Batch 01 access</button>
+        </form>
+        <div id="waitlist-done" role="status" class="rounded-md border p-5 flex flex-col gap-1 text-base max-w-[40rem]" style="border-color:var(--mint);background:rgba(47,133,98,.08)" hidden>
+          <p class="text-lg font-medium uppercase" id="done-title">You're on the list.</p>
+          <p id="done-body">We will email you when Batch 01 opens.</p>
+        </div>
+        
+      </div>
+      <div class="stage" role="img" aria-label="Three Clarity stick packs in Raspberry Yuzu, Orange Guava, and Watermelon Mint, each labeled Focus, Health, Hydration">
+        <img class="pk" src="/images/sachet1.webp" alt="" width="269" height="1118">
+        <img class="pk" src="/images/sachet2.webp" alt="" width="269" height="1118">
+        <img class="pk" src="/images/sachet3.webp" alt="" width="269" height="1118">
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-in">
+        <div class="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
+          <h2 class="uppercase font-light leading-none min-w-0" style="font-size:clamp(1.3rem,2vw,1.9rem);text-wrap:balance;letter-spacing:.02em">This is not an energy drink; <strong class="font-medium">this is Clarity</strong></h2>
+          
+        </div>
+        <ul class="benefits" aria-label="Benefits">
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            <div><h3>Steady focus</h3><p>Paraxanthine and L‑theanine, without the crash cycle</p></div></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+            <div><h3>Real hydration</h3><p>250 mg sodium and 200 mg potassium</p></div></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg>
+            <div><h3>Daily vitamins</h3><p>Vitamins B3, C, and D3 in every stick</p></div></li>
+        </ul>
+        <div class="cta-band">
+          <a href="#science" data-go="science" class="text-base underline underline-offset-4" style="color:var(--ink-soft)">See every ingredient and dose</a>
+          <a href="#home" data-join class="cta" style="width:auto;display:inline-block;text-align:center">Join the Batch 01 waitlist</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <main id="science" hidden>
+    <div class="sci">
+      <header class="flex flex-col gap-5">
+        <p class="text-sm uppercase tracking-[.08em]" style="color:var(--ink-soft)">The science</p>
+        <h1 class="font-medium uppercase leading-tight" style="text-wrap:balance">What is in the stick, and why.</h1>
+        <p class="lede">Clarity is built around paraxanthine, the compound your body turns caffeine into. Here is what that means and what each part of the mix is there to do.</p>
+      </header>
+
+      <section class="flex flex-col gap-6" aria-labelledby="px-h">
+        <h2 id="px-h">Paraxanthine, explained</h2>
+        <div class="two">
+          <div class="prose">
+            <p>When you drink coffee, caffeine does not stay caffeine for long. Your liver breaks it down, and most of it becomes <strong>paraxanthine</strong>. Smaller amounts become theobromine and theophylline.</p>
+            <p>Paraxanthine works the way caffeine does. It blocks adenosine, the signal that builds up through the day and makes you feel tired.</p>
+            <p>The catch with caffeine is that people convert it at very different speeds. Genetics, medication, and habits like smoking all change how fast the liver enzyme works. That is one reason the same cup of coffee feels smooth to one person and jittery to another.</p>
+            <p>Clarity skips the conversion step and gives you paraxanthine directly.</p>
+          </div>
+          <figure class="fig">
+            <figcaption>Where caffeine goes in the body (approximate share of its first breakdown step)</figcaption>
+            <div class="split" role="img" aria-label="About 84 percent of caffeine becomes paraxanthine, about 12 percent theobromine, and about 4 percent theophylline">
+              <span style="flex:84;background:var(--ink);color:#fff">Paraxanthine ~84%</span><span style="flex:12;background:var(--guava)"></span><span style="flex:4;background:var(--mint)"></span>
+            </div>
+            <ul class="key">
+              <li><i style="background:var(--ink)"></i>Paraxanthine, about 84%</li>
+              <li><i style="background:var(--guava)"></i>Theobromine, about 12%</li>
+              <li><i style="background:var(--mint)"></i>Theophylline, about 4%</li>
+            </ul>
+          </figure>
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th></th><th>Caffeine</th><th>Paraxanthine</th></tr></thead>
+            <tbody>
+              <tr><th>What it is</th><td>The stimulant in coffee, tea, and energy drinks</td><td>The main compound your liver makes from caffeine</td></tr>
+              <tr><th>How it works</th><td>Blocks adenosine, mostly after conversion</td><td>Blocks adenosine directly</td></tr>
+              <tr><th>Liver conversion needed</th><td>Yes, and the speed varies widely by person</td><td>No</td></tr>
+              <tr><th>Time in the body</th><td>Half-life around 4 to 5 hours on average, far longer for slow metabolizers</td><td>Half-life around 3 hours on average</td></tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-6" aria-labelledby="ing-h">
+        <h2 id="ing-h">What is in one stick</h2>
+        <div class="tablewrap">
+          <table class="facts">
+            <thead><tr><th>Ingredient</th><th>Amount</th><th>% Daily Value</th><th>Why it is there</th></tr></thead>
+            <tbody>
+              <tr><th>Paraxanthine</th><td>300 mg</td><td>†</td><td>The active compound for alertness and focus</td></tr>
+              <tr><th>L‑Theanine</th><td>200 mg</td><td>†</td><td>An amino acid found in tea, paired with stimulants for calm focus</td></tr>
+              <tr><th>CognatiQ</th><td>250 mg</td><td>†</td><td>A whole coffee fruit extract included for cognitive support</td></tr>
+              <tr><th>Sodium</th><td>250 mg</td><td>11%</td><td>The main electrolyte for holding on to fluid</td></tr>
+              <tr><th>Potassium</th><td>200 mg</td><td>4%</td><td>Works with sodium to keep fluid in balance</td></tr>
+              <tr><th>Vitamin B3</th><td>20 mg</td><td>125%</td><td>Helps turn food into usable energy</td></tr>
+              <tr><th>Vitamin C</th><td>150 mg</td><td>167%</td><td>Antioxidant and immune support</td></tr>
+              <tr><th>Vitamin D3</th><td>40 mcg</td><td>200%</td><td>Supports bone, muscle, and immune health</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">† Daily Value not established. Percent Daily Values are based on a 2,000 calorie diet.</p>
+      </section>
+
+      <section class="flex flex-col gap-6" aria-labelledby="ben-h">
+        <h2 id="ben-h">What each part does</h2>
+        <div class="cards">
+          <article><span class="tag">Focus</span><h3>Steady focus</h3><p>300 mg of paraxanthine supports alertness and attention without relying on how quickly your body processes caffeine. L‑theanine and CognatiQ are there to keep that focus calm and clear.</p></article>
+          <article><span class="tag">Hydration</span><h3>Real hydration</h3><p>Sodium and potassium are the electrolytes you lose through the day. Replacing them helps your body hold on to the water you drink.</p></article>
+          <article><span class="tag">Health</span><h3>Daily vitamins</h3><p>Each stick covers your full daily value of vitamins B3, C, and D3, so your focus drink also does a job your multivitamin would.</p></article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        
+        <a href="#home" data-join class="cta" style="width:auto;display:inline-block;text-align:center">Join the Batch 01 waitlist</a>
+      </section>
+    </div>
+  </main>
+  <div class="foot"><footer class="flex flex-col gap-3 text-sm" style="color:var(--ink-soft)">
+          <p class="max-w-[75ch] leading-snug">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+          <div class="flex flex-wrap justify-between gap-3 text-sm">
+            <span>© 2026 Clarity. All rights reserved.</span>
+            <span class="flex gap-5"><a href="#terms" class="underline-offset-4 hover:underline">Terms</a><a href="#privacy" class="underline-offset-4 hover:underline">Privacy</a></span>
+          </div>
+        </footer></div>
+</div>
+
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
