@@ -25,6 +25,11 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 .copy{display:flex;flex-direction:column;justify-content:center;gap:2.5rem;padding-block:3.5rem 1.5rem;min-width:0}
 .stage{display:flex;justify-content:center;align-items:flex-start;gap:5%;width:100%;max-width:720px;justify-self:center;align-self:center;min-width:0;padding-block:2rem}
 .pk{width:24%;height:auto;filter:drop-shadow(.4rem .8rem .9rem rgba(60,80,100,.2))}
+@media (max-width:1023.98px){
+  .stage{order:-1;padding-block:2rem 0}
+  .pk{width:auto;height:min(38vh,300px)}
+  .copy{padding-top:1.5rem}
+}
 @media (min-width:1024px){
   .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.5rem;padding-block:3rem;padding-right:0;min-height:calc(100vh - 4.1rem);align-items:center}
   .copy{padding-block:4rem;gap:3.25rem}
