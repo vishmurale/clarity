@@ -76,7 +76,7 @@ function json_(obj) {
 ## 2. Deploy on Netlify
 
 - **From GitHub:** the Netlify site linked to `vishmurale/clarity` deploys automatically on every push to `master`.
-  The `netlify.toml` at the repo root sets the publish folder to `waitlist/site`, with no build command.
+  The `netlify.toml` at the repo root sets the publish folder to `site`, with no build command.
 - **Without GitHub:** drag the `site` folder onto Netlify's **Deploys** page.
 
 ## Changing styles
